@@ -99,7 +99,7 @@ if __name__ == "__main__":
     for i in grid:
         for j in i:
             for k in adj(j.pos):
-                if k[0] < columns and k[1] < rows:
+                if k[0] in range(columns) and k[1] in range(rows):
                     if grid[k[1]][k[0]].hasMine:
                         j.adjMineCount += 1
 
